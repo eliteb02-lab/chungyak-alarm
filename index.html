@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>청약알리미 · 주택청약 공고 알림</title>
+<style>
+  :root{
+    --bg:#f4f6fb; --card:#ffffff; --ink:#1a2233; --sub:#5b6577;
+    --line:#e6eaf2; --brand:#2f6bff; --brand-soft:#eaf0ff;
+    --green:#12a869; --green-soft:#e4f7ee; --amber:#e08600; --amber-soft:#fdf1dc;
+    --red:#e0463c; --red-soft:#fdeceb; --gray:#8a93a6; --gray-soft:#eef1f6;
+    --shadow:0 1px 2px rgba(20,30,60,.04),0 8px 24px rgba(20,30,60,.06);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo",
+    "Malgun Gothic",sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* Header */
+  header{background:linear-gradient(120deg,#2f6bff,#5a86ff);color:#fff;padding:28px 0 22px}
+  .htop{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,.18);
+    display:grid;place-items:center;font-size:22px}
+  .brand h1{font-size:20px;font-weight:800;letter-spacing:-.3px}
+  .brand p{font-size:12.5px;opacity:.85;font-weight:500}
+  .hbtns{display:flex;gap:8px;flex-wrap:wrap}
+  .hbtn{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.25);
+    padding:8px 13px;border-radius:9px;font-size:13px;font-weight:600;cursor:pointer;
+    display:inline-flex;align-items:center;gap:6px;transition:.15s}
+  .hbtn:hover{background:rgba(255,255,255,.28)}
+  .hbtn.on{background:#fff;color:var(--brand)}
+  .stats{display:flex;gap:20px;margin-top:18px;flex-wrap:wrap}
+  .stat{color:#fff}
+  .stat b{font-size:22px;font-weight:800}
+  .stat span{font-size:12.5px;opacity:.85;margin-left:5px}
+
+  /* Filters */
+  .filters{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    box-shadow:var(--shadow);padding:16px;margin-top:-14px;position:relative;z-index:2}
+  .frow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .search{flex:1;min-width:220px;display:flex;align-items:center;gap:8px;
+    background:var(--gray-soft);border-radius:10px;padding:10px 12px}
+  .search input{border:none;background:none;outline:none;font-size:14px;width:100%;color:var(--ink)}
+  select{border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 12px;
+    font-size:13.5px;color:var(--ink);cursor:pointer;outline:none;font-weight:600}
+  .chips{display:flex;gap:7px;margin-top:12px;flex-wrap:wrap}
+  .chip{border:1px solid var(--line);background:#fff;color:var(--sub);border-radius:20px;
+    padding:6px 13px;font-size:12.5px;font-weight:600;cursor:pointer;transition:.15s}
+  .chip.active{background:var(--brand);border-color:var(--brand);color:#fff}
+  .chip.fav.active{background:var(--amber);border-color:var(--amber)}
+
+  /* List */
+  .list{margin:18px 0 40px;display:grid;gap:12px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    box-shadow:var(--shadow);padding:18px;display:flex;gap:16px;transition:.15s}
+  .card:hover{border-color:#cfd9ee;transform:translateY(-1px)}
+  .card .body{flex:1;min-width:0}
+  .ctop{display:flex;align-items:flex-start;gap:10px}
+  .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+  .b{font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:7px}
+  .b.region{background:var(--brand-soft);color:var(--brand)}
+  .b.type{background:var(--gray-soft);color:var(--sub)}
+  .b.open{background:var(--green-soft);color:var(--green)}
+  .b.soon{background:var(--amber-soft);color:var(--amber)}
+  .b.closed{background:var(--gray-soft);color:var(--gray)}
+  .name{font-size:17px;font-weight:800;letter-spacing:-.3px;margin-bottom:3px}
+  .addr{font-size:13px;color:var(--sub);margin-bottom:12px}
+  .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:8px 18px;font-size:13px}
+  .meta div span{color:var(--gray);margin-right:7px}
+  .meta div b{font-weight:700}
+  .cside{display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0}
+  .dday{text-align:center;border-radius:12px;padding:9px 12px;min-width:78px}
+  .dday.open{background:var(--green-soft)}
+  .dday.soon{background:var(--amber-soft)}
+  .dday.closed{background:var(--gray-soft)}
+  .dday b{display:block;font-size:19px;font-weight:800;line-height:1.1}
+  .dday.open b{color:var(--green)} .dday.soon b{color:var(--amber)} .dday.closed b{color:var(--gray)}
+  .dday span{font-size:11px;color:var(--sub);font-weight:600}
+  .star{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:#fff;
+    cursor:pointer;font-size:18px;color:#c8cedb;transition:.15s;display:grid;place-items:center}
+  .star:hover{border-color:var(--amber)}
+  .star.on{color:var(--amber);border-color:var(--amber);background:var(--amber-soft)}
+  .link{font-size:12.5px;color:var(--brand);font-weight:700}
+
+  .empty{text-align:center;padding:60px 20px;color:var(--gray)}
+  .empty div{font-size:40px;margin-bottom:12px}
+
+  /* Modal */
+  .modal{position:fixed;inset:0;background:rgba(20,30,60,.45);display:none;
+    align-items:center;justify-content:center;z-index:50;padding:20px}
+  .modal.show{display:flex}
+  .sheet{background:#fff;border-radius:18px;max-width:460px;width:100%;padding:24px;
+    box-shadow:0 20px 60px rgba(0,0,0,.25)}
+  .sheet h3{font-size:17px;font-weight:800;margin-bottom:4px}
+  .sheet p.d{font-size:13px;color:var(--sub);margin-bottom:16px}
+  .sheet label{font-size:12.5px;font-weight:700;color:var(--sub);display:block;margin:12px 0 5px}
+  .sheet input{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;
+    font-size:13.5px;outline:none}
+  .sheet input:focus{border-color:var(--brand)}
+  .hint{font-size:11.5px;color:var(--gray);margin-top:6px;line-height:1.5}
+  .hint a{color:var(--brand);font-weight:600}
+  .toggle{display:flex;align-items:center;gap:9px;margin-top:14px;font-size:13px;font-weight:600}
+  .toggle input{width:auto}
+  .sactions{display:flex;gap:8px;margin-top:20px}
+  .sactions button{flex:1;padding:11px;border-radius:10px;font-size:13.5px;font-weight:700;
+    cursor:pointer;border:none}
+  .btn-p{background:var(--brand);color:#fff}
+  .btn-s{background:var(--gray-soft);color:var(--sub)}
+  .banner{background:var(--amber-soft);color:#7a5200;font-size:12.5px;font-weight:600;
+    padding:10px 14px;border-radius:10px;margin-top:14px;display:none}
+  .banner.show{display:block}
+  footer{text-align:center;color:var(--gray);font-size:12px;padding:24px 0 40px;line-height:1.7}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="htop">
+      <div class="brand">
+        <div class="logo">🏠</div>
+        <div>
+          <h1>청약알리미</h1>
+          <p>전국 아파트 청약 공고 · 관심단지 마감 알림</p>
+        </div>
+      </div>
+      <div class="hbtns">
+        <button class="hbtn" id="notifyBtn">🔔 알림 켜기</button>
+        <button class="hbtn" id="settingsBtn">⚙️ API 설정</button>
+        <button class="hbtn" id="refreshBtn">↻ 새로고침</button>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="stTotal">0</b><span>전체 공고</span></div>
+      <div class="stat"><b id="stOpen">0</b><span>접수중</span></div>
+      <div class="stat"><b id="stSoon">0</b><span>접수예정</span></div>
+      <div class="stat"><b id="stFav">0</b><span>관심단지</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="filters">
+    <div class="frow">
+      <div class="search">
+        🔎 <input id="q" type="text" placeholder="단지명 · 주소 · 시행사 검색">
+      </div>
+      <select id="region"></select>
+      <select id="sort">
+        <option value="deadline">마감임박순</option>
+        <option value="recent">공고일 최신순</option>
+        <option value="units">공급세대 많은순</option>
+      </select>
+    </div>
+    <div class="chips" id="statusChips">
+      <button class="chip active" data-status="all">전체</button>
+      <button class="chip" data-status="open">접수중</button>
+      <button class="chip" data-status="soon">접수예정</button>
+      <button class="chip" data-status="closed">마감</button>
+      <button class="chip fav" data-status="fav">⭐ 관심단지만</button>
+    </div>
+  </div>
+
+  <div class="banner" id="dataBanner"></div>
+  <div class="list" id="list"></div>
+</div>
+
+<footer>
+  데이터 출처: 한국부동산원 청약홈 공공데이터(공공데이터포털)<br>
+  본 서비스는 정보 제공용이며 실제 청약은 청약홈(applyhome.co.kr)에서 진행하세요.
+</footer>
+
+<!-- Settings modal -->
+<div class="modal" id="modal">
+  <div class="sheet">
+    <h3>API 설정</h3>
+    <p class="d">공공데이터포털에서 발급받은 인증키를 넣으면 실시간 청약 공고를 불러옵니다.</p>
+    <label>서비스 인증키 (Decoding Key)</label>
+    <input id="apiKey" type="text" placeholder="공공데이터포털에서 발급받은 인증키">
+    <div class="hint">
+      1) <a href="https://www.data.go.kr/data/15098547/openapi.do" target="_blank">공공데이터포털 · 청약홈 분양정보 조회 서비스</a>에서 활용신청<br>
+      2) 발급된 <b>일반 인증키(Decoding)</b>를 위에 붙여넣기<br>
+      ※ 브라우저에서 직접 호출은 CORS로 막히므로 공개 프록시를 경유합니다. 키가 없으면 샘플 데이터로 동작합니다.
+    </div>
+    <div class="toggle">
+      <input type="checkbox" id="useProxy" checked>
+      <label style="margin:0">CORS 프록시 경유 (권장)</label>
+    </div>
+    <div class="sactions">
+      <button class="btn-s" id="closeModal">닫기</button>
+      <button class="btn-p" id="saveKey">저장 후 불러오기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const LS = {
+  key:'chungyak_apikey', proxy:'chungyak_proxy', fav:'chungyak_favs', notif:'chungyak_notif'
+};
+const REGIONS = ['서울','경기','인천','부산','대구','광주','대전','울산','세종',
+  '강원','충북','충남','전북','전남','경북','경남','제주'];
+
+// ---------- Sample data (fallback / demo) ----------
+const SAMPLE = [
+  {name:'래미안 원페를라', region:'서울', addr:'서울 서초구 방배동 891-3', type:'민영',
+   units:465, notice:'2026-07-08', rcBgn:'2026-07-20', rcEnd:'2026-07-22',
+   win:'2026-07-29', ctBgn:'2026-08-11', ctEnd:'2026-08-13',
+   dev:'삼성물산', tel:'1533-0000', url:'https://www.applyhome.co.kr'},
+  {name:'힐스테이트 등촌역', region:'서울', addr:'서울 강서구 등촌동 산136', type:'민영',
+   units:238, notice:'2026-07-11', rcBgn:'2026-07-15', rcEnd:'2026-07-17',
+   win:'2026-07-24', ctBgn:'2026-08-04', ctEnd:'2026-08-06',
+   dev:'현대엔지니어링', tel:'1544-0000', url:'https://www.applyhome.co.kr'},
+  {name:'광명자이 힐스테이트 SK뷰', region:'경기', addr:'경기 광명시 광명동 158-2', type:'민영',
+   units:1051, notice:'2026-07-03', rcBgn:'2026-07-14', rcEnd:'2026-07-16',
+   win:'2026-07-23', ctBgn:'2026-08-03', ctEnd:'2026-08-05',
+   dev:'GS건설·현대건설·SK에코플랜트', tel:'1668-0000', url:'https://www.applyhome.co.kr'},
+  {name:'동탄 파크릭스 A55블록', region:'경기', addr:'경기 화성시 동탄면 청계동 92', type:'공공',
+   units:632, notice:'2026-07-10', rcBgn:'2026-07-27', rcEnd:'2026-07-29',
+   win:'2026-08-05', ctBgn:'2026-08-18', ctEnd:'2026-08-20',
+   dev:'한국토지주택공사(LH)', tel:'1600-0000', url:'https://www.applyhome.co.kr'},
+  {name:'인천 검단신도시 AB19블록 제일풍경채', region:'인천', addr:'인천 서구 원당동 1234', type:'민영',
+   units:742, notice:'2026-07-06', rcBgn:'2026-07-13', rcEnd:'2026-07-15',
+   win:'2026-07-22', ctBgn:'2026-08-01', ctEnd:'2026-08-03',
+   dev:'제일건설', tel:'1670-0000', url:'https://www.applyhome.co.kr'},
+  {name:'e편한세상 시티 부평역', region:'인천', addr:'인천 부평구 부평동 199-45', type:'민영',
+   units:314, notice:'2026-06-27', rcBgn:'2026-07-06', rcEnd:'2026-07-08',
+   win:'2026-07-15', ctBgn:'2026-07-25', ctEnd:'2026-07-27',
+   dev:'DL이앤씨', tel:'1522-0000', url:'https://www.applyhome.co.kr'},
+  {name:'부산 에코델타시티 대방노블랜드', region:'부산', addr:'부산 강서구 명지동 3435', type:'민영',
+   units:889, notice:'2026-07-12', rcBgn:'2026-07-24', rcEnd:'2026-07-26',
+   win:'2026-08-04', ctBgn:'2026-08-17', ctEnd:'2026-08-19',
+   dev:'대방건설', tel:'1800-0000', url:'https://www.applyhome.co.kr'},
+  {name:'대구 수성구 범어 아이파크', region:'대구', addr:'대구 수성구 범어동 45-2', type:'민영',
+   units:427, notice:'2026-07-09', rcBgn:'2026-07-21', rcEnd:'2026-07-23',
+   win:'2026-07-30', ctBgn:'2026-08-10', ctEnd:'2026-08-12',
+   dev:'HDC현대산업개발', tel:'1811-0000', url:'https://www.applyhome.co.kr'},
+  {name:'세종 6-3생활권 M2블록 리첸시아', region:'세종', addr:'세종특별자치시 산울동 M2', type:'민영',
+   units:558, notice:'2026-07-13', rcBgn:'2026-07-30', rcEnd:'2026-08-01',
+   win:'2026-08-08', ctBgn:'2026-08-21', ctEnd:'2026-08-23',
+   dev:'신동아건설', tel:'1666-0000', url:'https://www.applyhome.co.kr'},
+  {name:'대전 도안 2-2지구 우미린', region:'대전', addr:'대전 유성구 학하동 800', type:'민영',
+   units:395, notice:'2026-06-30', rcBgn:'2026-07-09', rcEnd:'2026-07-11',
+   win:'2026-07-18', ctBgn:'2026-07-28', ctEnd:'2026-07-30',
+   dev:'우미건설', tel:'1600-1111', url:'https://www.applyhome.co.kr'},
+  {name:'광주 첨단 3지구 중흥S-클래스', region:'광주', addr:'광주 광산구 비아동 1200', type:'민영',
+   units:611, notice:'2026-07-07', rcBgn:'2026-07-17', rcEnd:'2026-07-19',
+   win:'2026-07-26', ctBgn:'2026-08-06', ctEnd:'2026-08-08',
+   dev:'중흥토건', tel:'1688-1111', url:'https://www.applyhome.co.kr'},
+  {name:'창원 마산 자이 헤리티지', region:'경남', addr:'경남 창원시 마산회원구 양덕동 3', type:'민영',
+   units:283, notice:'2026-06-25', rcBgn:'2026-07-02', rcEnd:'2026-07-04',
+   win:'2026-07-11', ctBgn:'2026-07-21', ctEnd:'2026-07-23',
+   dev:'GS건설', tel:'1544-2222', url:'https://www.applyhome.co.kr'},
+];
+
+// ---------- State ----------
+let items = [];
+let favs = JSON.parse(localStorage.getItem(LS.fav) || '[]');
+let filter = {q:'', region:'all', status:'all', sort:'deadline'};
+
+const today = new Date(); today.setHours(0,0,0,0);
+const parse = s => { const d=new Date(s+'T00:00:00'); return d; };
+const days = s => Math.round((parse(s)-today)/86400000);
+
+function statusOf(it){
+  const b=days(it.rcBgn), e=days(it.rcEnd);
+  if(today >= parse(it.rcBgn) && today <= parse(it.rcEnd)) return 'open';
+  if(b>0) return 'soon';
+  return 'closed';
+}
+function fmt(s){ if(!s) return '-'; const d=parse(s); return `${d.getMonth()+1}.${d.getDate()}`; }
+function idOf(it){ return it.name+'|'+it.rcBgn; }
+
+// ---------- Render ----------
+function render(){
+  const regionSel = document.getElementById('region');
+  if(!regionSel.options.length){
+    regionSel.innerHTML = '<option value="all">전체 지역</option>' +
+      REGIONS.map(r=>`<option value="${r}">${r}</option>`).join('');
+  }
+  let arr = items.map(it=>({...it, _st:statusOf(it), _d:days(it.rcEnd), _b:days(it.rcBgn)}));
+
+  // stats
+  document.getElementById('stTotal').textContent = arr.length;
+  document.getElementById('stOpen').textContent = arr.filter(x=>x._st==='open').length;
+  document.getElementById('stSoon').textContent = arr.filter(x=>x._st==='soon').length;
+  document.getElementById('stFav').textContent = favs.length;
+
+  // filter
+  let f = arr.filter(it=>{
+    if(filter.region!=='all' && it.region!==filter.region) return false;
+    if(filter.status==='fav'){ if(!favs.includes(idOf(it))) return false; }
+    else if(filter.status!=='all' && it._st!==filter.status) return false;
+    if(filter.q){
+      const q=filter.q.toLowerCase();
+      if(!(it.name+it.addr+it.dev).toLowerCase().includes(q)) return false;
+    }
+    return true;
+  });
+  // sort
+  f.sort((a,b)=>{
+    if(filter.sort==='recent') return parse(b.notice)-parse(a.notice);
+    if(filter.sort==='units') return b.units-a.units;
+    // deadline: open first by end date, then soon by begin, then closed
+    const rank=x=> x._st==='open'?0 : x._st==='soon'?1 : 2;
+    if(rank(a)!==rank(b)) return rank(a)-rank(b);
+    return (a._st==='soon'? a._b-b._b : a._d-b._d);
+  });
+
+  const list = document.getElementById('list');
+  if(!f.length){
+    list.innerHTML = `<div class="empty"><div>🔍</div>조건에 맞는 공고가 없습니다.</div>`;
+    return;
+  }
+  list.innerHTML = f.map(it=>{
+    const on = favs.includes(idOf(it));
+    let dd, ddCls, ddLabel;
+    if(it._st==='open'){ dd='D-'+it._d; ddCls='open'; ddLabel='접수마감'; if(it._d===0){dd='D-DAY';} }
+    else if(it._st==='soon'){ dd='D-'+it._b; ddCls='soon'; ddLabel='접수시작'; }
+    else { dd='마감'; ddCls='closed'; ddLabel=''; }
+    const stBadge = it._st==='open'?'<span class="b open">접수중</span>'
+      : it._st==='soon'?'<span class="b soon">접수예정</span>'
+      : '<span class="b closed">마감</span>';
+    return `<div class="card">
+      <div class="body">
+        <div class="badges">
+          <span class="b region">${it.region}</span>
+          <span class="b type">${it.type}</span>
+          ${stBadge}
+        </div>
+        <div class="name">${it.name}</div>
+        <div class="addr">📍 ${it.addr}</div>
+        <div class="meta">
+          <div><span>공급세대</span><b>${it.units.toLocaleString()}세대</b></div>
+          <div><span>모집공고</span><b>${fmt(it.notice)}</b></div>
+          <div><span>청약접수</span><b>${fmt(it.rcBgn)} ~ ${fmt(it.rcEnd)}</b></div>
+          <div><span>당첨발표</span><b>${fmt(it.win)}</b></div>
+          <div><span>건설사</span><b>${it.dev}</b></div>
+          <div><span>문의</span><b>${it.tel}</b></div>
+        </div>
+      </div>
+      <div class="cside">
+        <button class="star ${on?'on':''}" data-id="${idOf(it)}">${on?'★':'☆'}</button>
+        <div class="dday ${ddCls}"><b>${dd}</b><span>${ddLabel}</span></div>
+        <a class="link" href="${it.url}" target="_blank">청약홈 ↗</a>
+      </div>
+    </div>`;
+  }).join('');
+
+  list.querySelectorAll('.star').forEach(b=>{
+    b.onclick=()=>toggleFav(b.dataset.id);
+  });
+}
+
+function toggleFav(id){
+  if(favs.includes(id)) favs=favs.filter(x=>x!==id);
+  else favs.push(id);
+  localStorage.setItem(LS.fav, JSON.stringify(favs));
+  render();
+  checkAlerts();
+}
+
+// ---------- Alerts ----------
+function canNotify(){ return ('Notification' in window) && Notification.permission==='granted'; }
+function checkAlerts(){
+  if(!canNotify()) return;
+  const fired = JSON.parse(localStorage.getItem(LS.notif) || '[]');
+  const next=[...fired];
+  items.forEach(it=>{
+    if(!favs.includes(idOf(it))) return;
+    const st=statusOf(it);
+    let msg=null, tag=null;
+    if(st==='soon' && days(it.rcBgn)<=3){ msg=`청약 접수 ${days(it.rcBgn)}일 전! (${fmt(it.rcBgn)} 시작)`; tag=idOf(it)+'|soon'; }
+    if(st==='open'){ msg=`오늘 청약 접수중! ${fmt(it.rcEnd)}까지`; tag=idOf(it)+'|open'; }
+    if(msg && !fired.includes(tag)){
+      new Notification('🏠 '+it.name, {body:msg});
+      next.push(tag);
+    }
+  });
+  localStorage.setItem(LS.notif, JSON.stringify(next));
+}
+
+// ---------- Data loading ----------
+const API = 'https://api.odcloud.kr/api/ApplyhomeInfoDetailSvc/v1/getAPTLttotPblancDetail';
+const DATA_FILE = 'chungyak_data.json';  // 매일 예약작업이 갱신하는 파일
+
+async function loadData(){
+  const banner = document.getElementById('dataBanner');
+  // 1순위: 매일 자동 갱신되는 로컬 데이터 파일
+  banner.className='banner show';
+  banner.innerHTML='⏳ 최신 공고를 불러오는 중…';
+  try{
+    const res = await fetch(DATA_FILE, {cache:'no-store'});
+    if(res.ok){
+      const json = await res.json();
+      const rows = json.data || json.items || [];
+      if(rows.length){
+        items = rows.map(r=> r.HOUSE_NM ? mapRow(r) : r).filter(Boolean);
+        banner.className='banner';
+        const when = json.updatedAt ? '  ·  최종 갱신 '+json.updatedAt : '';
+        if(when){ banner.className='banner show';
+          banner.style.background='var(--green-soft)'; banner.style.color='#0b6b48';
+          banner.innerHTML='✅ 자동 갱신 데이터로 표시 중입니다.'+when; }
+        render(); checkAlerts(); return;
+      }
+    }
+  }catch(e){ /* 파일 없음 → 다음 단계 */ }
+
+  // 2순위: 인증키가 있으면 브라우저에서 직접(프록시 경유) 호출
+  const key = localStorage.getItem(LS.key);
+  if(!key){
+    items = SAMPLE.slice();
+    banner.className='banner show';
+    banner.style.background=''; banner.style.color='';
+    banner.innerHTML='📋 <b>샘플 데이터</b>로 표시 중입니다. 매일 자동 갱신을 설정했다면 chungyak_data.json 이 생성된 뒤 실데이터로 바뀝니다.';
+    render(); return;
+  }
+  banner.className='banner show';
+  banner.style.background=''; banner.style.color='';
+  banner.innerHTML='⏳ 실시간 청약 공고를 불러오는 중…';
+  try{
+    const useProxy = localStorage.getItem(LS.proxy)!=='0';
+    const params = new URLSearchParams({page:'1', perPage:'100', serviceKey:key});
+    let target = API+'?'+params.toString();
+    const url = useProxy ? 'https://api.allorigins.win/raw?url='+encodeURIComponent(target) : target;
+    const res = await fetch(url);
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const json = await res.json();
+    const rows = json.data || [];
+    if(!rows.length) throw new Error('데이터 없음');
+    items = rows.map(mapRow).filter(Boolean);
+    banner.className='banner';
+    render(); checkAlerts();
+  }catch(e){
+    items = SAMPLE.slice();
+    banner.className='banner show';
+    banner.innerHTML='⚠️ 실시간 데이터를 불러오지 못해 샘플로 표시합니다. ('+e.message+
+      ') 인증키·프록시 설정을 확인하세요.';
+    render();
+  }
+}
+// map 청약홈 API row → internal shape
+function mapRow(r){
+  try{
+    return {
+      name: r.HOUSE_NM || '(단지명 미상)',
+      region: (r.SUBSCRPT_AREA_CODE_NM||'').replace(/(특별시|광역시|특별자치시|특별자치도|도)$/,'')||'-',
+      addr: r.HSSPLY_ADRES || '-',
+      type: (r.HOUSE_SECD_NM==='APT'? (r.HOUSE_DTL_SECD_NM||'민영') : (r.HOUSE_SECD_NM||r.HOUSE_DTL_SECD_NM||'민영')),
+      units: parseInt(r.TOT_SUPLY_HSHLDCO)||0,
+      notice: (r.RCRIT_PBLANC_DE||'').slice(0,10),
+      rcBgn: (r.RCEPT_BGNDE||r.SUBSCRPT_RCEPT_BGNDE||'').slice(0,10),
+      rcEnd: (r.RCEPT_ENDDE||r.SUBSCRPT_RCEPT_ENDDE||'').slice(0,10),
+      win: (r.PRZWNER_PRESNATN_DE||'').slice(0,10),
+      dev: r.CNSTRCT_ENTRPS_NM || r.BSNS_MBY_NM || '-',
+      tel: r.MDHS_TELNO || '-',
+      url: r.PBLANC_URL || r.HMPG_ADRES || 'https://www.applyhome.co.kr'
+    };
+  }catch(e){ return null; }
+}
+
+// ---------- Events ----------
+document.getElementById('q').oninput = e=>{ filter.q=e.target.value; render(); };
+document.getElementById('region').onchange = e=>{ filter.region=e.target.value; render(); };
+document.getElementById('sort').onchange = e=>{ filter.sort=e.target.value; render(); };
+document.getElementById('statusChips').onclick = e=>{
+  const c=e.target.closest('.chip'); if(!c) return;
+  document.querySelectorAll('#statusChips .chip').forEach(x=>x.classList.remove('active'));
+  c.classList.add('active'); filter.status=c.dataset.status; render();
+};
+document.getElementById('refreshBtn').onclick = loadData;
+
+// settings modal
+const modal=document.getElementById('modal');
+document.getElementById('settingsBtn').onclick=()=>{
+  document.getElementById('apiKey').value = localStorage.getItem(LS.key)||'';
+  document.getElementById('useProxy').checked = localStorage.getItem(LS.proxy)!=='0';
+  modal.classList.add('show');
+};
+document.getElementById('closeModal').onclick=()=>modal.classList.remove('show');
+modal.onclick=e=>{ if(e.target===modal) modal.classList.remove('show'); };
+document.getElementById('saveKey').onclick=()=>{
+  const k=document.getElementById('apiKey').value.trim();
+  if(k) localStorage.setItem(LS.key,k); else localStorage.removeItem(LS.key);
+  localStorage.setItem(LS.proxy, document.getElementById('useProxy').checked?'1':'0');
+  modal.classList.remove('show');
+  loadData();
+};
+
+// notifications
+const notifyBtn=document.getElementById('notifyBtn');
+function updateNotifyBtn(){
+  if(!('Notification' in window)){ notifyBtn.style.display='none'; return; }
+  if(Notification.permission==='granted'){ notifyBtn.classList.add('on'); notifyBtn.textContent='🔔 알림 켜짐'; }
+  else notifyBtn.textContent='🔔 알림 켜기';
+}
+notifyBtn.onclick=async()=>{
+  if(!('Notification' in window)) return;
+  const p=await Notification.requestPermission();
+  updateNotifyBtn();
+  if(p==='granted'){ new Notification('청약알리미', {body:'관심단지 마감 알림이 켜졌습니다.'}); checkAlerts(); }
+};
+
+// init
+updateNotifyBtn();
+loadData();
+</script>
+</body>
+</html>
