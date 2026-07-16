@@ -1,7 +1,63 @@
 {
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-07-17",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "월계 중흥S-클래스 리비에르",
+      "region": "서울",
+      "addr": "서울특별시 노원구 월계동 487-17번지 일대",
+      "type": "민영",
+      "units": 135,
+      "notice": "2026-07-16",
+      "rcBgn": "2026-07-27",
+      "rcEnd": "2026-07-30",
+      "win": "2026-08-05",
+      "dev": "중흥토건(주)",
+      "tel": "15512607",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000355&pblancNo=2026000355"
+    },
+    {
+      "name": "역북 서희스타힐스 프라임시티(조합원 취소분)",
+      "region": "경기",
+      "addr": "경기도 용인시 처인구 역북동 89-25번지 일원",
+      "type": "민영",
+      "units": 5,
+      "notice": "2026-07-16",
+      "rcBgn": "2026-07-27",
+      "rcEnd": "2026-07-28",
+      "win": "2026-08-03",
+      "dev": "(주)서희건설",
+      "tel": "0313351254",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000327&pblancNo=2026000327"
+    },
+    {
+      "name": "이천 휴먼빌 클래스원",
+      "region": "경기",
+      "addr": "경기도 이천시 갈산동 572-1번지 일원",
+      "type": "민영",
+      "units": 536,
+      "notice": "2026-07-16",
+      "rcBgn": "2026-07-27",
+      "rcEnd": "2026-07-29",
+      "win": "2026-08-04",
+      "dev": "일신건영(주)",
+      "tel": "16448890",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000291&pblancNo=2026000291"
+    },
+    {
+      "name": "창원 한신더휴 메가센텀",
+      "region": "경남",
+      "addr": "경상남도 창원시 마산회원구 회원동 480-31번지 일대",
+      "type": "민영",
+      "units": 1139,
+      "notice": "2026-07-16",
+      "rcBgn": "2026-07-27",
+      "rcEnd": "2026-07-29",
+      "win": "2026-08-04",
+      "dev": "한신공영(주)",
+      "tel": "0552951117",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000282&pblancNo=2026000282"
+    },
     {
       "name": "오산헤리티지자이 2단지",
       "region": "경기",
@@ -1345,62 +1401,6 @@
       "dev": "(주)동원개발",
       "tel": "15669300",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000102&pblancNo=2026000102"
-    },
-    {
-      "name": "천안 동문 디 이스트 파크시티",
-      "region": "충남",
-      "addr": "충청남도 천안시 동남구 삼룡동 376-50번지 일원",
-      "type": "민영",
-      "units": 500,
-      "notice": "2026-04-24",
-      "rcBgn": "2026-05-04",
-      "rcEnd": "2026-05-07",
-      "win": "2026-05-13",
-      "dev": "동문건설(주)",
-      "tel": "15221183",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000096&pblancNo=2026000096"
-    },
-    {
-      "name": "소제지구 A4BL 중흥S-클래스 우미린",
-      "region": "전남",
-      "addr": "전라남도 여수시 소호동 828번지 일원 여수소제지구 A4블록",
-      "type": "민영",
-      "units": 584,
-      "notice": "2026-04-24",
-      "rcBgn": "2026-05-04",
-      "rcEnd": "2026-05-08",
-      "win": "2026-05-15",
-      "dev": "중흥토건(주)",
-      "tel": "0616869360",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000091&pblancNo=2026000091"
-    },
-    {
-      "name": "소제지구 A3BL 중흥S-클래스 우미린",
-      "region": "전남",
-      "addr": "전라남도 여수시 소호동 828번지 일원 여수소제지구 A3블록",
-      "type": "민영",
-      "units": 1095,
-      "notice": "2026-04-24",
-      "rcBgn": "2026-05-04",
-      "rcEnd": "2026-05-08",
-      "win": "2026-05-14",
-      "dev": "중흥토건(주)",
-      "tel": "0616869360",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000090&pblancNo=2026000090"
-    },
-    {
-      "name": "e편한세상 부천 어반스퀘어",
-      "region": "경기",
-      "addr": "경기도 부천시 원미구 소사동 48-21 일대(소사3구역 재개발정비사업)",
-      "type": "민영",
-      "units": 897,
-      "notice": "2026-04-23",
-      "rcBgn": "2026-05-04",
-      "rcEnd": "2026-05-07",
-      "win": "2026-05-13",
-      "dev": "디엘이앤씨 주식회사, 롯데건설 주식회사",
-      "tel": "0323231649",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000152&pblancNo=2026000152"
     }
   ]
 }
