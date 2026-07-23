@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-07-23",
+  "updatedAt": "2026-07-24",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "수원당수지구 A5블록 신혼희망타운(공공분양) 추가 입주자모집",
+      "region": "경기",
+      "addr": "경기도 수원시 권선구 금곡동, 당수동 일원 수원당수 공공주택지구내 A5블록",
+      "type": "신혼희망타운",
+      "units": 142,
+      "notice": "2026-07-23",
+      "rcBgn": "2026-08-03",
+      "rcEnd": "2026-08-04",
+      "win": "2026-08-13",
+      "dev": "효성중공업주식회사",
+      "tel": "0312975229",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026820007&pblancNo=2026820007"
+    },
     {
       "name": "월계 중흥S-클래스 리비에르",
       "region": "서울",
@@ -1387,20 +1401,6 @@
       "dev": "일신건영(주)",
       "tel": "15222445",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000127&pblancNo=2026000127"
-    },
-    {
-      "name": "울산신복역 비스타 메트로",
-      "region": "울산",
-      "addr": "울산광역시 남구 무거동 822-1번지 일원",
-      "type": "민영",
-      "units": 481,
-      "notice": "2026-04-24",
-      "rcBgn": "2026-05-06",
-      "rcEnd": "2026-05-08",
-      "win": "2026-05-14",
-      "dev": "(주)동원개발",
-      "tel": "15669300",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000102&pblancNo=2026000102"
     }
   ]
 }
