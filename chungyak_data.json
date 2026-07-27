@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-07-28",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "아산테크노밸리 더원 7차 (Ab4BL)",
+      "region": "충남",
+      "addr": "충청남도 아산시 둔포면 아산테크노밸리 Ab4BL (아산시 둔포면 석곡리 1818번지 일원)",
+      "type": "민영",
+      "units": 622,
+      "notice": "2026-07-27",
+      "rcBgn": "2026-08-03",
+      "rcEnd": "2026-08-05",
+      "win": "2026-08-11",
+      "dev": "주식회사 라인산업",
+      "tel": "0415430622",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000295&pblancNo=2026000295"
+    },
     {
       "name": "센트레빌 아스테리움 거제",
       "region": "경남",
@@ -1387,20 +1401,6 @@
       "dev": "태원건설산업(주)",
       "tel": "15516264",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000156&pblancNo=2026000156"
-    },
-    {
-      "name": "기장 이진캐스빌 포레",
-      "region": "부산",
-      "addr": "부산광역시 기장군 기장읍 대라리 541-1번지 일원",
-      "type": "민영",
-      "units": 138,
-      "notice": "2026-04-24",
-      "rcBgn": "2026-04-29",
-      "rcEnd": "2026-05-04",
-      "win": "2026-05-11",
-      "dev": "동수토건 주식회사",
-      "tel": "0517243600",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000146&pblancNo=2026000146"
     }
   ]
 }
