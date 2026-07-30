@@ -1,7 +1,35 @@
 {
-  "updatedAt": "2026-07-29",
+  "updatedAt": "2026-07-31",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "한강 푸르지오 리버프론트",
+      "region": "경기",
+      "addr": "경기도 김포시 고촌읍 향산리 588-45번지 일원",
+      "type": "민영",
+      "units": 2432,
+      "notice": "2026-07-30",
+      "rcBgn": "2026-08-10",
+      "rcEnd": "2026-08-12",
+      "win": "2026-08-20",
+      "dev": "(주)대우건설",
+      "tel": "16680552",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000367&pblancNo=2026000367"
+    },
+    {
+      "name": "두산위브더제니스 대연",
+      "region": "부산",
+      "addr": "부산광역시 남구 대연동 1756-9번지",
+      "type": "민영",
+      "units": 176,
+      "notice": "2026-07-30",
+      "rcBgn": "2026-08-10",
+      "rcEnd": "2026-08-12",
+      "win": "2026-08-19",
+      "dev": "두산건설 주식회사",
+      "tel": "18114588",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000356&pblancNo=2026000356"
+    },
     {
       "name": "아산테크노밸리 더원 7차 (Ab4BL)",
       "region": "충남",
@@ -1373,34 +1401,6 @@
       "dev": "쌍용건설(주)",
       "tel": "0316571277",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000111&pblancNo=2026000111"
-    },
-    {
-      "name": "더샵 시에르네(조합원 취소분)",
-      "region": "울산",
-      "addr": "울산광역시 중구 학성동 397-1번지 일원",
-      "type": "민영",
-      "units": 36,
-      "notice": "2026-04-28",
-      "rcBgn": "2026-05-08",
-      "rcEnd": "2026-05-12",
-      "win": "2026-05-19",
-      "dev": "(주)포스코이앤씨",
-      "tel": "0522977000",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000133&pblancNo=2026000133"
-    },
-    {
-      "name": "더 리치먼드 미아",
-      "region": "서울",
-      "addr": "서울특별시 강북구 미아동 703-13번지",
-      "type": "민영",
-      "units": 99,
-      "notice": "2026-04-27",
-      "rcBgn": "2026-05-07",
-      "rcEnd": "2026-05-12",
-      "win": "2026-05-18",
-      "dev": "태원건설산업(주)",
-      "tel": "15516264",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000156&pblancNo=2026000156"
     }
   ]
 }
