@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-07-31",
+  "updatedAt": "2026-08-01",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "세종 우미 린 센터파크(행정중심복합도시 5-2생활권 S1블록, 글미마을 9단지)",
+      "region": "세종",
+      "addr": "세종특별자치시 다솜동 5204-1번지 일원(행정중심복합도시 5-2생활권 S1BL)",
+      "type": "민영",
+      "units": 676,
+      "notice": "2026-07-31",
+      "rcBgn": "2026-08-10",
+      "rcEnd": "2026-08-12",
+      "win": "2026-08-19",
+      "dev": "우미건설(주)",
+      "tel": "0448663666",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000323&pblancNo=2026000323"
+    },
     {
       "name": "한강 푸르지오 리버프론트",
       "region": "경기",
@@ -1387,20 +1401,6 @@
       "dev": "(주)비에스한양",
       "tel": "15448802",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000154&pblancNo=2026000154"
-    },
-    {
-      "name": "더 플래티넘 파인애비뉴",
-      "region": "경기",
-      "addr": "경기도 평택시 팽성읍 송화리 123번지 일원",
-      "type": "민영",
-      "units": 321,
-      "notice": "2026-04-29",
-      "rcBgn": "2026-05-11",
-      "rcEnd": "2026-05-13",
-      "win": "2026-05-21",
-      "dev": "쌍용건설(주)",
-      "tel": "0316571277",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000111&pblancNo=2026000111"
     }
   ]
 }
