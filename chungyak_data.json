@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-08-10",
+  "updatedAt": "2026-08-11",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "성남복정2 A1블록 신혼희망타운(공공분양)(본청약)",
+      "region": "경기",
+      "addr": "경기도 성남시 수정구 신흥동 81-8",
+      "type": "신혼희망타운",
+      "units": 594,
+      "notice": "2026-08-10",
+      "rcBgn": "2026-08-31",
+      "rcEnd": "2026-09-08",
+      "win": "2026-09-17",
+      "dev": "(주)케이알산업, 동성건설(주)",
+      "tel": "0316992006",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026820008&pblancNo=2026820008"
+    },
     {
       "name": "시흥거모 A-5블록 신혼희망타운(공공분양)(본청약)",
       "region": "경기",
@@ -1387,20 +1401,6 @@
       "dev": "(주)태영건설",
       "tel": "0552231250",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000163&pblancNo=2026000163"
-    },
-    {
-      "name": "왕숙 아테라 공공분양주택(본청약)",
-      "region": "경기",
-      "addr": "경기도 남양주시 일패동 일원(남양주 왕숙2지구 A-1BL)",
-      "type": "공공",
-      "units": 812,
-      "notice": "2026-04-30",
-      "rcBgn": "2026-05-18",
-      "rcEnd": "2026-05-28",
-      "win": "2026-06-12",
-      "dev": "금호건설 주식회사, 이수건설 주식회사, 주식회사 비에스한양, 이에스아이 주식회사",
-      "tel": "16618121",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000142&pblancNo=2026000142"
     }
   ]
 }
