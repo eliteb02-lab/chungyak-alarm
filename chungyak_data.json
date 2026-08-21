@@ -1,7 +1,35 @@
 {
-  "updatedAt": "2026-08-21",
+  "updatedAt": "2026-08-22",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "검암역 푸르지오 프라베뉴 (B-1BL) 공공분양주택",
+      "region": "인천",
+      "addr": "인천광역시 서해구 인천검암역세권 공공주택지구 내 B-1BL",
+      "type": "공공",
+      "units": 441,
+      "notice": "2026-08-21",
+      "rcBgn": "2026-08-31",
+      "rcEnd": "2026-09-02",
+      "win": "2026-09-08",
+      "dev": "㈜대우건설, 동부건설㈜, ㈜비에스한양, 경화건설㈜, 브니엘네이처㈜",
+      "tel": "18000441",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000404&pblancNo=2026000404"
+    },
+    {
+      "name": "시티오씨엘 9단지 오션파크뷰",
+      "region": "인천",
+      "addr": "인천광역시 미추홀구 학익동 인천 용현·학익 1블록 도시개발구역 공동3BL",
+      "type": "민영",
+      "units": 1949,
+      "notice": "2026-08-21",
+      "rcBgn": "2026-08-31",
+      "rcEnd": "2026-09-02",
+      "win": "2026-09-08",
+      "dev": "아이파크현대산업개발(주),현대건설(주),(주)포스코이앤씨",
+      "tel": "0328311141",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000388&pblancNo=2026000388"
+    },
     {
       "name": "포레나힐스테이트 진주",
       "region": "경남",
@@ -1373,34 +1401,6 @@
       "dev": "㈜포스코이앤씨",
       "tel": "16000255",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000166&pblancNo=2026000166"
-    },
-    {
-      "name": "더샵 송도그란테르 G5-3블록",
-      "region": "인천",
-      "addr": "인천광역시 연수구 송도동 32-12 (G5-3BL)",
-      "type": "민영",
-      "units": 85,
-      "notice": "2026-05-07",
-      "rcBgn": "2026-05-19",
-      "rcEnd": "2026-05-21",
-      "win": "2026-06-02",
-      "dev": "㈜포스코이앤씨",
-      "tel": "16000255",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000165&pblancNo=2026000165"
-    },
-    {
-      "name": "더샵 송도그란테르 G5-1블록",
-      "region": "인천",
-      "addr": "인천광역시 연수구 송도동 32-1, 4 (G5-1BL)",
-      "type": "민영",
-      "units": 853,
-      "notice": "2026-05-07",
-      "rcBgn": "2026-05-19",
-      "rcEnd": "2026-05-21",
-      "win": "2026-05-28",
-      "dev": "㈜포스코이앤씨",
-      "tel": "16000255",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000164&pblancNo=2026000164"
     }
   ]
 }
