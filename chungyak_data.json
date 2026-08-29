@@ -1,7 +1,35 @@
 {
-  "updatedAt": "2026-08-28",
+  "updatedAt": "2026-08-29",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "문수데시앙2단지 공가세대 일반공급",
+      "region": "울산",
+      "addr": "울산광역시 울주군 청량읍 율리영해2길 7 (문수데시앙 2단지 아파트) ",
+      "type": "공공",
+      "units": 22,
+      "notice": "2026-08-28",
+      "rcBgn": "2026-09-07",
+      "rcEnd": "2026-09-08",
+      "win": "2026-09-14",
+      "dev": "(주)태영건설",
+      "tel": "0522198485",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000401&pblancNo=2026000401"
+    },
+    {
+      "name": "브라운스톤 월곡 센트럴",
+      "region": "서울",
+      "addr": "서울특별시 성북구 하월곡동 70-4번지 일원",
+      "type": "민영",
+      "units": 62,
+      "notice": "2026-08-28",
+      "rcBgn": "2026-09-07",
+      "rcEnd": "2026-09-10",
+      "win": "2026-09-16",
+      "dev": "이수건설 주식회사",
+      "tel": "15997775",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000399&pblancNo=2026000399"
+    },
     {
       "name": "양주회천지구 A-26블록 공공분양주택",
       "region": "경기",
@@ -1373,34 +1401,6 @@
       "dev": "㈜한양건설",
       "tel": "15770505",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000132&pblancNo=2026000132"
-    },
-    {
-      "name": "더샵 송도그란테르 G5-11블록",
-      "region": "인천",
-      "addr": "인천광역시 연수구 송도동 32-15 (G5-11BL)",
-      "type": "민영",
-      "units": 318,
-      "notice": "2026-05-07",
-      "rcBgn": "2026-05-19",
-      "rcEnd": "2026-05-21",
-      "win": "2026-06-01",
-      "dev": "㈜포스코이앤씨",
-      "tel": "16000255",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000169&pblancNo=2026000169"
-    },
-    {
-      "name": "더샵 송도그란테르 G5-6블록",
-      "region": "인천",
-      "addr": "인천광역시 연수구 송도동 32-3, 6 (G5-6BL)",
-      "type": "민영",
-      "units": 100,
-      "notice": "2026-05-07",
-      "rcBgn": "2026-05-19",
-      "rcEnd": "2026-05-21",
-      "win": "2026-06-02",
-      "dev": "㈜포스코이앤씨",
-      "tel": "16000255",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000168&pblancNo=2026000168"
     }
   ]
 }
