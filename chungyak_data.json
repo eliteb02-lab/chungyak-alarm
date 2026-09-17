@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-09-17",
+  "updatedAt": "2026-09-18",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "천안 용곡 두산위브(조합원 취소분)",
+      "region": "충남",
+      "addr": "충청남도 천안시 동남구 풍세로 801(용곡동 617번지)",
+      "type": "민영",
+      "units": 7,
+      "notice": "2026-09-17",
+      "rcBgn": "2026-09-28",
+      "rcEnd": "2026-09-29",
+      "win": "2026-10-06",
+      "dev": "두산건설(주)",
+      "tel": "0415717988",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000454&pblancNo=2026000454"
+    },
     {
       "name": "화서역 호수공원 아너스빌",
       "region": "경기",
@@ -1387,20 +1401,6 @@
       "dev": "디엘이앤씨 주식회사",
       "tel": "0315381777",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026820004&pblancNo=2026820004"
-    },
-    {
-      "name": "화성동탄2지구 C-27블록 공공분양주택",
-      "region": "경기",
-      "addr": "경기도 화성시 동탄구 일원 화성동탄2 택지개발사업지구 내 C-27블록",
-      "type": "공공",
-      "units": 473,
-      "notice": "2026-05-29",
-      "rcBgn": "2026-06-09",
-      "rcEnd": "2026-06-12",
-      "win": "2026-06-25",
-      "dev": "(주)서희건설",
-      "tel": "16001004",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000230&pblancNo=2026000230"
     }
   ]
 }
