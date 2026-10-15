@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-16",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "신분평 에피트 더웨이시티",
+      "region": "충북",
+      "addr": "충청북도 청주시 서원구 장성동 135번지 일원(장성지구 A2블럭)",
+      "type": "민영",
+      "units": 992,
+      "notice": "2026-10-15",
+      "rcBgn": "2026-10-27",
+      "rcEnd": "2026-10-29",
+      "win": "2026-11-04",
+      "dev": "에이치엘디앤아이한라 주식회사, 에이치엘에코텍 주식회사",
+      "tel": "15336700",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000455&pblancNo=2026000455"
+    },
     {
       "name": "청주 가경 아이파크 8단지",
       "region": "충북",
@@ -1387,20 +1401,6 @@
       "dev": "(주)서희건설",
       "tel": "15776803",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000281&pblancNo=2026000281"
-    },
-    {
-      "name": "양주 회천지구 A-8BL 로제비앙 엘가",
-      "region": "경기",
-      "addr": "경기도 양주시 회정동 양주신도시 회천지구 A8블록",
-      "type": "민영",
-      "units": 361,
-      "notice": "2026-06-22",
-      "rcBgn": "2026-07-02",
-      "rcEnd": "2026-07-06",
-      "win": "2026-07-10",
-      "dev": "로제비앙건설(주), 모아건설산업(주)",
-      "tel": "15223636",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000278&pblancNo=2026000278"
     }
   ]
 }
