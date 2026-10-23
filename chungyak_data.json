@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-10-22",
+  "updatedAt": "2026-10-23",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "청라 아크원 푸르지오",
+      "region": "인천",
+      "addr": "인천광역시 서해구 청라동 86-1번지 (청라국제업무단지 M5BL)",
+      "type": "민영",
+      "units": 868,
+      "notice": "2026-10-22",
+      "rcBgn": "2026-11-02",
+      "rcEnd": "2026-11-04",
+      "win": "2026-11-10",
+      "dev": "(주)대우건설",
+      "tel": "15516881",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000496&pblancNo=2026000496"
+    },
     {
       "name": "화성 향남 롯데캐슬 시그니처",
       "region": "경기",
@@ -1387,20 +1401,6 @@
       "dev": "요진건설산업(주)",
       "tel": "0319410730",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000320&pblancNo=2026000320"
-    },
-    {
-      "name": "고양창릉지구 S-3블록 이익공유형 분양주택(본청약)",
-      "region": "경기",
-      "addr": "경기도 고양시 덕양구 도내동 외 8개 동 일원 고양창릉 공공주택지구 내 S-3블록",
-      "type": "공공",
-      "units": 1282,
-      "notice": "2026-06-30",
-      "rcBgn": "2026-07-20",
-      "rcEnd": "2026-07-29",
-      "win": "2026-08-18",
-      "dev": "에치에스화성㈜, 대성베르힐건설㈜, ㈜디에이치에스건설",
-      "tel": "0319464501",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000313&pblancNo=2026000313"
     }
   ]
 }
