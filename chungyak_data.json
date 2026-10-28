@@ -1,7 +1,35 @@
 {
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "삼도이동 2지구 토지임대부 공공분양주택",
+      "region": "제주",
+      "addr": "제주특별자치도 제주시 삼도이동 1246-1 외 4필지",
+      "type": "공공",
+      "units": 40,
+      "notice": "2026-10-27",
+      "rcBgn": "2026-11-16",
+      "rcEnd": "2026-11-18",
+      "win": "2026-11-25",
+      "dev": "국토건설(주)",
+      "tel": "15443310",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000435&pblancNo=2026000435"
+    },
+    {
+      "name": "삼도이동 1지구 토지임대부 공공분양주택",
+      "region": "제주",
+      "addr": "제주특별자치도 제주시 삼도이동 1244-1 ",
+      "type": "공공",
+      "units": 32,
+      "notice": "2026-10-27",
+      "rcBgn": "2026-11-16",
+      "rcEnd": "2026-11-18",
+      "win": "2026-11-24",
+      "dev": "국토건설(주)",
+      "tel": "15443310",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000434&pblancNo=2026000434"
+    },
     {
       "name": "시흥하중지구 A1블록 신혼희망타운(공공분양) 추가입주자모집공고",
       "region": "경기",
@@ -1373,34 +1401,6 @@
       "dev": "(주)대우건설",
       "tel": "16683535",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000276&pblancNo=2026000276"
-    },
-    {
-      "name": "평택역 더센트럴45",
-      "region": "경기",
-      "addr": "경기도 평택시 평택동 45-1",
-      "type": "민영",
-      "units": 99,
-      "notice": "2026-07-09",
-      "rcBgn": "2026-07-20",
-      "rcEnd": "2026-07-22",
-      "win": "2026-07-29",
-      "dev": "파인건설 주식회사",
-      "tel": "0316542654",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000336&pblancNo=2026000336"
-    },
-    {
-      "name": "호반써밋 풍무Ⅲ",
-      "region": "경기",
-      "addr": "김포 풍무역세권 B4블록 (경기도 김포시 사우동 458번지 일원)",
-      "type": "민영",
-      "units": 660,
-      "notice": "2026-07-09",
-      "rcBgn": "2026-07-20",
-      "rcEnd": "2026-07-22",
-      "win": "2026-07-28",
-      "dev": "주식회사 호반산업",
-      "tel": "16707830",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000329&pblancNo=2026000329"
     }
   ]
 }
