@@ -1,7 +1,49 @@
 {
-  "updatedAt": "2026-10-29",
+  "updatedAt": "2026-10-30",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "중앙하이츠 구성 플랫폼시티",
+      "region": "경기",
+      "addr": "경기도 용인시 기흥구 마북동 298-1번지 일원",
+      "type": "민영",
+      "units": 76,
+      "notice": "2026-10-29",
+      "rcBgn": "2026-11-09",
+      "rcEnd": "2026-11-12",
+      "win": "2026-11-18",
+      "dev": "씨에이이앤씨 주식회사",
+      "tel": "18991008",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000535&pblancNo=2026000535"
+    },
+    {
+      "name": "엘리프 시흥 더프라임",
+      "region": "경기",
+      "addr": "경기도 시흥시 거모동 시흥거모지구 B-5블록",
+      "type": "민영",
+      "units": 304,
+      "notice": "2026-10-29",
+      "rcBgn": "2026-11-09",
+      "rcEnd": "2026-11-11",
+      "win": "2026-11-17",
+      "dev": "계룡건설산업(주)",
+      "tel": "16441966",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000525&pblancNo=2026000525"
+    },
+    {
+      "name": "한화포레나 지제역",
+      "region": "경기",
+      "addr": "경기도 평택시 세교동 725번지 일원",
+      "type": "민영",
+      "units": 1098,
+      "notice": "2026-10-29",
+      "rcBgn": "2026-11-09",
+      "rcEnd": "2026-11-11",
+      "win": "2026-11-18",
+      "dev": "(주)한화",
+      "tel": "16611098",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000499&pblancNo=2026000499"
+    },
     {
       "name": "삼도이동 2지구 토지임대부 공공분양주택",
       "region": "제주",
@@ -1359,48 +1401,6 @@
       "dev": "아이파크현대산업개발주식회사",
       "tel": "15770262",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000312&pblancNo=2026000312"
-    },
-    {
-      "name": "부산 장안지구 B-2블록 중흥S-클래스(본청약)",
-      "region": "부산",
-      "addr": "부산광역시 기장군 장안읍 좌동리 463-3번지 일원(부산 장안지구 B-2블록)",
-      "type": "민영",
-      "units": 488,
-      "notice": "2026-07-10",
-      "rcBgn": "2026-07-20",
-      "rcEnd": "2026-07-22",
-      "win": "2026-07-28",
-      "dev": "중흥토건(주)",
-      "tel": "0517287836",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000308&pblancNo=2026000308"
-    },
-    {
-      "name": "의왕역 SK VIEW",
-      "region": "경기",
-      "addr": "경기도 의왕시 삼동 192-244번지 일원",
-      "type": "민영",
-      "units": 820,
-      "notice": "2026-07-10",
-      "rcBgn": "2026-07-20",
-      "rcEnd": "2026-07-23",
-      "win": "2026-07-29",
-      "dev": "에스케이에코플랜트 주식회사",
-      "tel": "0314271857",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000301&pblancNo=2026000301"
-    },
-    {
-      "name": "업성 푸르지오 레이크시티 2단지",
-      "region": "충남",
-      "addr": "충청남도 천안시 서북구 업성동 업성3도시개발구역 A2BL",
-      "type": "민영",
-      "units": 448,
-      "notice": "2026-07-10",
-      "rcBgn": "2026-07-20",
-      "rcEnd": "2026-07-22",
-      "win": "2026-07-28",
-      "dev": "(주)대우건설",
-      "tel": "16683535",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000276&pblancNo=2026000276"
     }
   ]
 }
