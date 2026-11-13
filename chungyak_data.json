@@ -1,7 +1,35 @@
 {
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-13",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "아르뮤제자이",
+      "region": "경기",
+      "addr": "경기도 안산시 상록구 성포동 586번지 일원",
+      "type": "민영",
+      "units": 984,
+      "notice": "2026-11-12",
+      "rcBgn": "2026-11-23",
+      "rcEnd": "2026-11-25",
+      "win": "2026-12-01",
+      "dev": "지에스건설(주)",
+      "tel": "18333367",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000576&pblancNo=2026000576"
+    },
+    {
+      "name": "부천대장 하우스토리 디센트(부천대장지구 A2BL) 공공분양주택",
+      "region": "경기",
+      "addr": "경기도 부천시 오정구 대장동, 오정동, 원종동, 삼정동 일원 부천대장 공공주택지구 내 A2블록",
+      "type": "공공",
+      "units": 548,
+      "notice": "2026-11-12",
+      "rcBgn": "2026-11-23",
+      "rcEnd": "2026-11-25",
+      "win": "2026-12-01",
+      "dev": "남광토건(주), 중흥토건(주), (주)케이알산업, 극동건설(주), 씨앤씨종합건설(주)",
+      "tel": "0323220548",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000457&pblancNo=2026000457"
+    },
     {
       "name": "시흥 거모 아테라(시흥거모 A-6BL) 신혼희망타운(공공분양)(본청약)",
       "region": "경기",
@@ -1373,34 +1401,6 @@
       "dev": "자이에스앤디(주), 지에스건설(주)",
       "tel": "16601245",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000358&pblancNo=2026000358"
-    },
-    {
-      "name": "달서자이 제니크",
-      "region": "대구",
-      "addr": "대구광역시 달서구 본리동 661-9번지 일원",
-      "type": "민영",
-      "units": 360,
-      "notice": "2026-08-06",
-      "rcBgn": "2026-08-18",
-      "rcEnd": "2026-08-20",
-      "win": "2026-08-26",
-      "dev": "지에스건설(주)",
-      "tel": "18332330",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000376&pblancNo=2026000376"
-    },
-    {
-      "name": "세종 우미 린 센터파크(행정중심복합도시 5-2생활권 S1블록, 글미마을 9단지)",
-      "region": "세종",
-      "addr": "세종특별자치시 다솜동 5204-1번지 일원(행정중심복합도시 5-2생활권 S1BL)",
-      "type": "민영",
-      "units": 676,
-      "notice": "2026-07-31",
-      "rcBgn": "2026-08-10",
-      "rcEnd": "2026-08-12",
-      "win": "2026-08-19",
-      "dev": "우미건설(주)",
-      "tel": "0448663666",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000323&pblancNo=2026000323"
     }
   ]
 }
