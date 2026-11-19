@@ -1,7 +1,35 @@
 {
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-19",
   "source": "한국부동산원 청약홈 (공공데이터포털)",
   "data": [
+    {
+      "name": "두산위브 트레지움 익산",
+      "region": "전북",
+      "addr": "전북특별자치도 익산시 동산동 1057번지 일원",
+      "type": "민영",
+      "units": 251,
+      "notice": "2026-11-18",
+      "rcBgn": "2026-11-23",
+      "rcEnd": "2026-11-25",
+      "win": "2026-12-01",
+      "dev": "두산건설 주식회사",
+      "tel": "0638581118",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000559&pblancNo=2026000559"
+    },
+    {
+      "name": "구미 파크원 데시앙",
+      "region": "경북",
+      "addr": "경상북도 구미시 도량동 산40-4번지 일원",
+      "type": "민영",
+      "units": 1355,
+      "notice": "2026-11-18",
+      "rcBgn": "2026-11-23",
+      "rcEnd": "2026-11-25",
+      "win": "2026-12-02",
+      "dev": "주식회사 태영건설",
+      "tel": "0544431355",
+      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000536&pblancNo=2026000536"
+    },
     {
       "name": "호반써밋 초량",
       "region": "부산",
@@ -1373,34 +1401,6 @@
       "dev": "한신공영(주)",
       "tel": "15660879",
       "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000377&pblancNo=2026000377"
-    },
-    {
-      "name": "오남역 서희스타힐스 여의재 1단지",
-      "region": "경기",
-      "addr": "경기도 남양주시 오남읍 양지리 101번지 일원",
-      "type": "민영",
-      "units": 180,
-      "notice": "2026-08-13",
-      "rcBgn": "2026-08-24",
-      "rcEnd": "2026-08-26",
-      "win": "2026-09-01",
-      "dev": "(주)서희건설",
-      "tel": "15550074",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000365&pblancNo=2026000365"
-    },
-    {
-      "name": "두산위브더제니스 부천",
-      "region": "경기",
-      "addr": "경기도 부천시 소사구 소사본동 88-39번지 일대",
-      "type": "민영",
-      "units": 1158,
-      "notice": "2026-08-12",
-      "rcBgn": "2026-08-19",
-      "rcEnd": "2026-08-21",
-      "win": "2026-08-28",
-      "dev": "두산건설 주식회사, 쌍용건설(주)",
-      "tel": "0323272008",
-      "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000382&pblancNo=2026000382"
     }
   ]
 }
